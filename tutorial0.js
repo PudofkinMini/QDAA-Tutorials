@@ -20,9 +20,14 @@ WHAT WE WILL COVER:
 5. while loops
 6. Arrays
 7. Functions
+
+Prerequisites:
+1. VSCode
+2. CodeRunner extension installed
+3. nodeJS installed
 */
 
-
+//----------------------------------------------------------------------------------------------------------------------------
 
 /* PART 1 - Data types
 
@@ -234,4 +239,14 @@ const higherOrderFunction = (someFunction) => {
     console.log(someFunction());
 }
 higherOrderFunction(myArrowFunction);
+
+//----------------------------------------------------------------------------------------------------------------------------
+
+/* PART 8 - Practice Exercises
+
+1. 
+
+*/
+
+
 // For more info, please visit the link at the top of the document.
