@@ -45,6 +45,9 @@ let d = 45; // or even 45.6
 // string
 let e = "Hello World";
 
+//basic console log to show how a variable works
+
+
 // symbol – not important for now
 // bigint – not important for now
 // and a complex data type object - not important for now but will be soon
@@ -141,7 +144,15 @@ however a while loop is more likely to give you an error than a for loop as it i
 define it to run forever.
 */
 
+
 // EXAMPLE 5.1
+let counter = 0;
+while (counter < 10) {
+    console.log(counter);
+    counter++;
+}
+
+// EXAMPLE 5.2
 let index = 10;
 let index2 = 100;
 while (index < 100 && index2 > 50) {
@@ -150,7 +161,7 @@ while (index < 100 && index2 > 50) {
 }
 console.log(index);
 
-// EXAMPLE 5.2
+// EXAMPLE 5.3
 // let infiniteLoop = 100;
 // while (infiniteLoop >= 0) {
 //     if (infiniteLoop > 0) {
@@ -165,7 +176,7 @@ console.log(index);
 
 /*Half-Time coding puzzle
 
-2. print out all odd numbers between 1 and 100 in backwards order.
+ print out all odd numbers between 1 and 100 in backwards order.
 
 */
 
