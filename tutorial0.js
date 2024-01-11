@@ -32,30 +32,33 @@ Prerequisites:
 /* PART 1 - Data types
 
 JavaScript has 8 primitive data types:
-
 */
 
 // null
 let a = null;
+console.log("a: " + a);
 
 // undefined
 let b;
+console.log("b: " + b);
 
 // boolean
 let c = true; // or false
+console.log("c: " + c);
 
 // number
 let d = 45; // or even 45.6
+console.log("d: " + d);
 
 // string
 let e = "Hello World";
+console.log("e: " + e);
 
-//basic console log to show how a variable works
 
 
 // symbol – not important for now
 // bigint – not important for now
-// and a complex data type object - not important for now but will be soon
+// and a complex (non-primitive) data type object - not important for now but will be soon
 
 //----------------------------------------------------------------------------------------------------------------------------
 
@@ -82,33 +85,33 @@ In Part 1, you can see variables a, b, c, d, and e get defined as different prim
 //----------------------------------------------------------------------------------------------------------------------------
 
 /* PART 3 - Conditional Statements
-A program will execute the instructions you give it top->down, left->right
+A program will execute the instructions you give it left->right, top->bottom 
 
 You can use an if-statement to allow instructions to be executed only if some condition is true.
 You are responsible for defining what this condition is.
 */
 
-// EXAMPLE 3.1 - if
-let userInput = 5;
-if (userInput == 5) {
-    console.log("User Input is equal to 5.");
-}
-if (userInput != 5) { // The expression (a.k.a condition) userInput != 5 will evaluate to false.
-    console.log("User Input is not equal to 5."); // Meaning that this code will not be executed.
-}
+// // EXAMPLE 3.1 - if
+// let userInput = 5;
+// if (userInput == 5) {
+//     console.log("User Input is equal to 5.");
+// }
+// if (userInput != 5) { // The expression (a.k.a condition) userInput != 5 will evaluate to false.
+//     console.log("User Input is not equal to 5."); // Meaning that this code will not be executed.
+// }
 
-// EXAMPLE 3.2 - if, else if, else
-let userInput2 = 10;
-let userInput3 = 20;
-if (userInput2 == 10) {
-    console.log("First branch was executed.")
-}
-else if (userInput3 == 20) { // Even though this condition is true, the first branch was already chosen.
-    console.log("Second branch was executed.")
-}
-else {
-    console.log("Third branch was executed.")
-}
+// // EXAMPLE 3.2 - if, else if, else
+// let userInput2 = 10;
+// let userInput3 = 20;
+// if (userInput2 == 10) {
+//     console.log("First branch was executed.")
+// }
+// else if (userInput3 == 20) { // Even though this condition is true, the first branch was already chosen.
+//     console.log("Second branch was executed.")
+// }
+// else {
+//     console.log("Third branch was executed.")
+// }
 
 //----------------------------------------------------------------------------------------------------------------------------
 
@@ -121,19 +124,19 @@ to provide a counter variable (a.k.a index) that increments (or decrements) each
 For example lets say I want to add up all of the even numbers from 1 all the way to 100.
 */
 
-// EXAMPLE 4.1
-let sum = 0; // data type is a number
-for (let i = 1; i <= 100; i++) {
-    if (i % 2 == 0) { // condition/expression to check if i is even.
-        sum += i;
-    }
-}
-console.log(sum);
+// // EXAMPLE 4.1
+// let sum = 0; // data type is a number
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 2 == 0) { // condition/expression to check if i is even.
+//         sum += i;
+//     }
+// }
+// console.log(sum);
 
-// EXAMPLE 4.2
-for (let i = 100; i > 0; i -= 7) {
-    console.log(i)
-}
+// // EXAMPLE 4.2
+// for (let i = 100; i > 0; i -= 7) {
+//     console.log(i)
+// }
 
 //----------------------------------------------------------------------------------------------------------------------------
 
@@ -150,21 +153,21 @@ define it to run forever.
 */
 
 
-// EXAMPLE 5.1
-let counter = 0;
-while (counter < 10) {
-    console.log(counter);
-    counter++;
-}
+// // EXAMPLE 5.1
+// let counter = 0;
+// while (counter < 10) {
+//     console.log(counter);
+//     counter++;
+// }
 
-// EXAMPLE 5.2
-let index = 10;
-let index2 = 100;
-while (index < 100 && index2 > 50) {
-    index++;
-    index2--;
-}
-console.log(index);
+// // EXAMPLE 5.2
+// let index = 10;
+// let index2 = 100;
+// while (index < 100 && index2 > 50) {
+//     index++;
+//     index2--;
+// }
+// console.log(index);
 
 // EXAMPLE 5.3
 // let infiniteLoop = 100;
@@ -181,25 +184,26 @@ console.log(index);
 
 /*Half-Time coding puzzle
 
- print out all odd numbers between 1 and 100 in backwards order.
+print out all odd numbers between 1 and 100 in backwards order.
 
 */
 
 //----------------------------------------------------------------------------------------------------------------------------
 
 /* PART 6 - Arrays
-In JavaScript, an array is an ordered list of values. Each value is called an element specified by an index:
+In JavaScript, an array is a data type that represents an ordered list of values. Each value is called an element specified 
+by an index:
 
 [elem1, elem2, elem3, elem4]
 
 You are allowed to have different data types stored in an array
 */
 
-// EXAMPLE 6.1 
-myArray = [1, 2, 3, 'cat', "dog", true, null];
-for (let i = 0; i < myArray.length; i++) {
-    console.log(myArray[i]);
-}
+// // EXAMPLE 6.1 
+// myArray = [1, 2, 3, 'cat', "dog", true, null];
+// for (let i = 0; i < myArray.length; i++) {
+//     console.log(myArray[i]);
+// }
 
 //----------------------------------------------------------------------------------------------------------------------------
 
@@ -213,38 +217,40 @@ A function is defined by the following syntax:
 function FUNCTION_NAME_HERE(PARAMETER_1, PARAMETER_2, PARAMETER_3, ..., PARAMETER_N)
 */
 
-// EXAMPLE 7.1
-function myCountingFunction() {
-    let sum = 0; // data type is a number
-    for (let i = 1; i <= 100; i++) {
-        if (i % 2 == 0) { // condition/expression to check if i is even.
-            sum += i;
-        }
-    }
-    return sum;
-}
+// // EXAMPLE 7.1
+// function myCountingFunction() {
+//     let sum = 0; // data type is a number
+//     for (let i = 1; i <= 100; i++) {
+//         if (i % 2 == 0) { // condition/expression to check if i is even.
+//             sum += i;
+//         }
+//     }
+//     return sum;
+// }
 
-// EXAMPLE 7.2
-function mySumFunction(param1, param2, param3) {
-    return param1 + param2 + param3;
-}
+// // EXAMPLE 7.2
+// function mySumFunction(param1, param2, param3) {
+//     return param1 + param2 + param3;
+// }
 
-// EXAMPLE 7.3
-const myArrowFunction = () => {
-    return 17;
-}
+// // EXAMPLE 7.3
+// const myArrowFunction = () => {
+//     return 17;
+// }
 
-// EXAMPLE 7.4
-const higherOrderFunction = (someFunction) => {
-    console.log(someFunction());
-}
-higherOrderFunction(myArrowFunction);
+// // EXAMPLE 7.4
+// const higherOrderFunction = (someFunction) => {
+//     console.log(someFunction());
+// }
+// higherOrderFunction(myArrowFunction);
 
 //----------------------------------------------------------------------------------------------------------------------------
 
 /* PART 8 - Practice Exercises
 
-1. 
+1. Loop through the interval [1, 100] and print out all numbers divisible by 3 or 5, but not both. Get the sum of these numbers.
+2. Write a function that takes in a number and returns true if the number is prime and false if it is not.
+3. Write a function that takes in 2 numbers and returns their greatest common divisor.
 
 */
 
